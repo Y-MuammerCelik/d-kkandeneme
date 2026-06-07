@@ -1,324 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>serdar elektronik</title>
-    <style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
+    <title>Serdar Elektronik - Profesyonel Teknik Servis</title>
     
-    .container{
-        background: url(img/dükkan.jpeg);
-        height: 100vh;
-        background-size: 100% 100%;
-    }
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
-    .container .navbar{
-        width: 100%;
-        height: 80px;
-        background: rgba(22,112,214,0.4);
-    }
-    
-    .container .navbar .logo a{
-        position:absolute;
-        margin-left: 50px;
-        margin-top: 20px;
-    }
-    
-    .navbar .logo a{
-        text-decoration: none;
-        font-size: 35px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: #ffffff;
-    }
-    
-    .navbar ul{
-        float: right;
-        margin-right: 20px;
-    }
-    
-    .navbar ul li{
-        list-style: none;
-        display: inline-block;
-        margin:0 10px;
-        line-height: 83px;
-    }
-    
-    .navbar ul li a{
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 20px;
-        padding: 6px 13px;
-       font-family:fantasy;
-    
-    }
-    .navbar ul li a.active,
-    .navbar ul li a:hover{
-        background: #c34848;
-        
-    }
-    
-    .container .divcenter {
-        position:absolute;
-        top:40%;
-        left:35%;
-        transform:translate(-50%-50%);
-        font-family:sans-serif;
-        user-select: none;
-    }
-    .divcenter h1{
-        color: rgb(117, 219, 231);
-        font-size: 65px;
-        font-weight:bold;
-        width: 750px;
-        text-align: center;
-    }
-    .divcenter h2{
-        color: rgb(117, 219, 231);
-        font-size: 50px;
-        font-weight: bold;
-        width: 885px;
-        margin-top:10px ;
-        text-align: center;
-    }
-    .divcenter h3{
-        color: rgb(180, 30, 30);
-        font-size: 40px;
-        font-weight: bold;
-        width: 885px;
-        margin-top:10px ;
-        text-align: center;
-    }
-    
-    * {
-        box-sizing: border-box;
-    }
-    
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    
-    #container {
-        width: 500px;
-        margin: auto;
-    }
-    
-    #flyMenu {
-        width: 370px;
-        max-width: 100%;
-        float: left;
-        padding: 50px 35px 40px 35px;
-        text-align: center;
-        background-color: #444444;
-        transition: all 0.3s ease-in-out;
-        position: fixed;
-        float: right;
-        right: 0;
-        top: 0;
-        height: 100%;
-        z-index: 9998;
-        transform: translate3d(370px, 0, 0);
-    }
-    
-    #flyMenu.open {
-        transform: translate3d(0, 0, 0) !important;
-    }
-    
-    #flyMenu .photo {
-        position: relative;
-        width: 180px;
-        height: 180px;
-        margin: 0 auto 30px auto;
-        z-index: 1;
-    }
-    
-    #flyMenu .photo::after {
-        content: "";
-        position: absolute;
-        right: -10px;
-        bottom: -7px;
-        display: block;
-        border-radius: 100%;
-        width: 100%;
-        height: 100%;
-        opacity: .3;
-        z-index: -1;
-        background-image: -webkit-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
-        background-image: -ms-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
-        background-size: 6px 6px;
-    }
-    
-    #flyMenu .photo img {
-        width: 100%;
-        height: auto;
-        border-radius: 100%;
-        border: 3px solid #04B5C1;
-    }
-    
-    #flyMenu .title {
-        margin-top: 15px;
-    }
-    
-    #flyMenu .title h2 {
-        font-size: 32px;
-        font-weight: 600;
-        color: #f5f5f5;
-    }
-    
-    #flyMenu .title h4 {
-        font-size: 15px;
-        font-weight: 300;
-        color: #bbb;
-    }
-    
-    #flyMenu .mainMenu {
-        margin: 30px 0;
-    }
-    
-    #flyMenu .mainMenu li a {
-        display: block;
-        color: #ffffff;
-        padding: 10px 0;
-        opacity: .7;
-        font-size: 14px;
-    }
-    
-    #flyMenu .mainMenu li a:hover {
-        opacity: 1;
-    }
-    
-    #container{
-       position: absolute; 
-        top: 29px;
-        left: 1410px;
-    }
-    #flyToggleButton{
-        font-size: 15px;
-        float: left;
-        position: absolute;
-        left: 400px;
-        margin-top: 55px;
-        background: #c34848;
-    }
-    .hizmet1 img {
-        position: absolute;
-        width: 250px;
-        height:250px;
-        border: 5px solid #555;
-        left: 200px;
-    }
-    .hizmet2 img {
-        position: absolute;
-        width: 250px;
-        height: 250px;
-        border: 5px solid #555;
-        left: 650px;
-    }
-    .hizmet3 img {
-        position: absolute;
-        width: 250px;
-        height: 250px;
-        border: 5px solid #555;
-        left: 1100px;
-    }
-    .hizmet4 img {
-        position: absolute;
-        top: 400px;
-        width: 250px;
-        height: 250px;
-        border: 5px solid #555;
-        left: 200px;
-    }
-    .hizmet5 img {
-        position: absolute;
-        top: 400px;
-        width: 250px;
-        height: 250px;
-        border: 5px solid #555;
-        left: 650px;
-    }
-    .hizmet6 img {
-        position: absolute;
-        width: 250px;
-        height: 250px;
-        border: 5px solid #555;
-        left: 1100px;
-    }
-    header{
-        font-size: 30px;
-        color: #b31111;
-        background-color: rgb(74, 101, 210);
-    }
-</style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
- <div class="container">
-    <div class="navbar">
-        <div class="logo">
-            <a href="#">SERDAR ELEKTRONİK</a>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        <div class="announcement-text">
+            ⚡ Hızlı İletişim: 0537 897 64 61 | Ev servis ücreti 150 TL | Çanak anten montajı 250 TL | %100 Müşteri Memnuniyeti
         </div>
-        <ul>
-            <li><a href="#"class="active">ANA SAYFA</a></li>
-            <li><a href="hizmetlerimiz.html">HİZMETLERİMİZ</a></li>
-            <li><a href="YETKİLİ SERVİS.html">YETKİLİ SERVİS</a></li>
-            <li><a href="fotoGaleri.html">FOTO GALERİ</a></li>
-            
-            
-        </ul>
-        <button id="flyToggleButton" type="button">Designed by Muammer Çelik</button>
     </div>
-    <header>
-        <marquee behavior="alternate" direction="up" width="100%"><marquee direction="left">Serdar elektronik 0 537 897 64 61 ev servis ücreti 150tl çanak anten montajı 250 tl </marquee></marquee></a>
-    </header>
-    <div class="divcenter">
-        <h1>Serdar Elektroniğe </h1>
-        <h2>Hoş geldiniz</h2>
-        <h3>Yeşilce Mh. Şehit Haydar Arslan Caddesi 165. Sokak, Arsin, Trabzon 61900 </h3>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">SERDAR <span>ELEKTRONİK</span></a>
+        </div>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Nav Links Wrapper -->
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">ANA SAYFA</a></li>
+                <li><a href="hizmetlerimiz.html">HİZMETLERİMİZ</a></li>
+                <li><a href="yetkili-servis.html">YETKİLİ SERVİS</a></li>
+                <li><a href="foto-galeri.html">FOTO GALERİ</a></li>
+            </ul>
+            <button id="flyToggleButton" class="fly-menu-btn">İletişim & Geliştirici</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="hero">
+        <h1 data-aos="fade-down">Garantili ve Hızlı Teknik Servis</h1>
+        <h2 data-aos="fade-up" data-aos-delay="200">Trabzon Arsin'de elektronik cihazlarınız uzman ellere emanet.</h2>
+        
+        <div class="hero-cta" data-aos="zoom-in" data-aos-delay="400">
+            <a href="https://wa.me/905378976461" target="_blank" class="btn btn-primary">
+                📱 Hemen WhatsApp'tan Fiyat Al
+            </a>
+            <a href="#calculator" class="btn btn-outline">
+                📍 Servis Süresini Öğren
+            </a>
+        </div>
+    </main>
+
+    <!-- Process Section (Nasıl Çalışıyoruz?) -->
+    <section>
+        <h2 class="section-title" data-aos="fade-up">Nasıl Çalışıyoruz?</h2>
+        <div class="process-steps">
+            <div class="step" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-icon">📞</div>
+                <h4>1. İletişim</h4>
+                <p>Arızayı bildirin ve ücretsiz ön bilgi alın.</p>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-icon">🔍</div>
+                <h4>2. Arıza Tespiti</h4>
+                <p>Cihazı yerinde veya atölyemizde inceleyelim.</p>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="300">
+                <div class="step-icon">🔧</div>
+                <h4>3. Onay & Tamir</h4>
+                <p>Fiyat onayı alındıktan sonra tamir işlemi başlar.</p>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="400">
+                <div class="step-icon">✅</div>
+                <h4>4. Teslimat</h4>
+                <p>Cihazınız çalışır durumda ve garantili teslim edilir.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Müşteri Yorumları) -->
+    <section class="testimonials-section">
+        <h2 class="section-title" data-aos="fade-up">Müşterilerimiz Ne Diyor?</h2>
+        
+        <!-- Dinamik Yorumlar Buraya Gelecek -->
+        <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="200">
+            <div class="swiper-wrapper" id="reviewsContainer">
+                <!-- Slides will be injected by main.js -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="add-review-btn-container" data-aos="fade-up" data-aos-delay="300">
+            <button class="btn btn-outline" data-modal-target="modal-add-review">Siz de Yorum Yapın ✍️</button>
+        </div>
+    </section>
+
+    <!-- Distance Calculator Section -->
+    <section id="calculator">
+        <div class="calculator-section" data-aos="zoom-in">
+            <h2>Hızlı Servis, Anında Müdahale</h2>
+            <p style="margin-top:15px; font-size:1.1rem; opacity:0.9;">Bize ne kadar uzaktasınız? Servis aracımızın size ne kadar sürede ulaşabileceğini hemen öğrenin.</p>
+            
+            <div class="calculator-box">
+                <button id="calculateDistanceBtn" class="btn btn-primary" style="font-size:1.2rem; padding:15px 40px;">
+                    📍 Konumumu Kullanarak Hesapla
+                </button>
+                <div id="calcResult"></div>
+                <p style="margin-top:15px; font-size:0.9rem; opacity:0.7;">(Tarayıcı konum izni gerektirir. Verileriniz kaydedilmez, sadece anlık hesaplama yapılır.)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="background: var(--bg-light);">
+        <h2 class="section-title" data-aos="fade-up">Sıkça Sorulan Sorular</h2>
+        <div class="faq-container">
+            
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <button class="faq-question">
+                    Tamir işlemleri ne kadar sürüyor? <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Arızanın durumuna ve yedek parça teminine göre değişmekle birlikte, cihazların %80'ini aynı gün içerisinde teslim ediyoruz. Detaylı bilgi için arıza kaydı oluşturabilirsiniz.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <button class="faq-question">
+                    Yapılan işlemlerde garanti veriyor musunuz? <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Evet, değiştirdiğimiz tüm yedek parçalara ve işçiliğimize marka bazlı olarak 6 ay ile 1 yıl arasında garanti veriyoruz.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <button class="faq-question">
+                    Evden cihaz teslim alıyor musunuz? <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Evet, Trabzon Arsin ve çevresi için eve servis imkanımız bulunmaktadır. Kurulum, söküm ve taşıma işlemleri uzman ekibimiz tarafından yapılmaktadır.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modals Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        
+        <!-- Yorum Yap Modalı -->
+        <div class="review-form-modal service-modal" id="modal-add-review" style="display:none;">
+            <button class="close-modal">&times;</button>
+            <h2>Yorumunuzu Bırakın</h2>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="reviewName">İsim Soyisim</label>
+                    <input type="text" id="reviewName" required placeholder="Adınız Soyadınız">
+                </div>
+                
+                <div class="form-group">
+                    <label>Puanınız</label>
+                    <div class="star-rating-input">
+                        <input type="radio" id="star5" name="rating" value="5" checked><label for="star5" title="5 Yıldız">★</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 Yıldız">★</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 Yıldız">★</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 Yıldız">★</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 Yıldız">★</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewText">Yorumunuz</label>
+                    <textarea id="reviewText" rows="4" required placeholder="Hizmetimiz hakkında ne düşünüyorsunuz?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Gönder</button>
+            </form>
+        </div>
 
     </div>
- </div>
- <div id="flyMenu">
-    <div class="flyMenuContent">
-        <div class="flyMenuHeader">
-            <div class="photo">
-                <img src="img/foto.jpg" >
-            </div>
-            <div class="title">
-                <h2>Muammer Çelik</h2>
-                <h4>Öğrenci</h4>
-            </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/905378976461" target="_blank" class="whatsapp-float">
+        💬 <span>Bize Ulaşın</span>
+    </a>
+
+    <!-- Fly Menu -->
+    <div id="flyMenu">
+        <button id="closeMenuBtn" class="close-menu-btn">&times;</button>
+        <div class="photo">
+            <img src="img/foto.jpg" alt="Muammer Çelik">
+        </div>
+        <div class="title">
+            <h2>Muammer Çelik</h2>
+            <h4>Öğrenci & Geliştirici</h4>
         </div>
         <ul class="mainMenu">
-            <li><a href="https://www.instagram.com/mmmr_clk_61/">İnstagram</a></li>
-            <li><a href="https://www.facebook.com/muammer.celik.121">Facebook</a></li>
-            <li><a href="https://www.youtube.com/channel/UC6ljECf1dqznIpgFBCwc6nQ">YouTube</a></li>
-            <li><a href="https://github.com/smithcimuo">Github</a></li>
-            <li><a href="mailto:muammeer.clk@gmail.com">Mail Gönder</a></li>
+            <li><a target="_blank" href="https://www.instagram.com/mmmr_clk_61/">📸 İnstagram</a></li>
+            <li><a target="_blank" href="https://www.facebook.com/muammer.celik.121">📘 Facebook</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UC6ljECf1dqznIpgFBCwc6nQ">🎥 YouTube</a></li>
+            <li><a target="_blank" href="https://github.com/smithcimuo">💻 Github</a></li>
+            <li><a href="mailto:muammeer.clk@gmail.com">✉️ Mail Gönder</a></li>
         </ul>
     </div>
-</div>
- <script>
-    let flyToggleButton = document.getElementById("flyToggleButton");
-let flyMenu = document.getElementById("flyMenu");
 
-flyToggleButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  flyMenu.classList.toggle("open");
-});
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col" data-aos="fade-up">
+                <h3>Serdar Elektronik</h3>
+                <p>Yılların tecrübesiyle elektronik cihazlarınızın onarımı ve kurulumu konusunda profesyonel destek sağlıyoruz.</p>
+            </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <h3>İletişim</h3>
+                <p>📍 Yeşilce Mh. Şehit Haydar Arslan Cd. 165. Sk. Arsin/Trabzon</p>
+                <p>📞 0537 897 64 61</p>
+                <p>⏰ Pazartesi - Cumartesi: 09:00 - 19:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Serdar Elektronik. Tasarım: Muammer Çelik.</p>
+        </div>
+    </footer>
 
- </script>
-    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>

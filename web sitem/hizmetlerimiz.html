@@ -1,354 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>serdar elektronik</title>
-    <style>
-*{
-    margin: 0;
-    padding: 0;
-}
-
-.container{
-    background: url(img/uydu.jpg);
-    height: 127vh;
-    background-size: 100% 100%;
-}
-
-.container .navbar{
-    width: 100%;
-    height: 80px;
-    background: rgba(22,112,214,0.4);
-}
-
-.container .navbar .logo a{
-    position:absolute;
-    margin-left: 50px;
-    margin-top: 20px;
-}
-
-.navbar .logo a{
-    text-decoration: none;
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #ffffff
-}
-.navbar{
-    margin-bottom: 10px;
-}
-
-.navbar ul{
-    float: right;
-    margin-right: 20px;
-
-}
-
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin:0 10px;
-    line-height: 83px;
-}
-
-.navbar ul li a{
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 6px 13px;
-   font-family:fantasy;
-
-}
-.navbar ul li a.active,
-.navbar ul li a:hover{
-    background: #c34848;
+    <title>Serdar Elektronik - Hizmetlerimiz</title>
     
-}
-
-.container .divcenter {
-    position:absolute;
-    top:40%;
-    left:35%;
-    transform:translate(-50%-50%);
-    font-family:sans-serif;
-    user-select: none;
-}
-.divcenter h1{
-    color: rgb(22, 2, 2);
-    font-size: 65px;
-    font-weight:bold;
-    width: 750px;
-    text-align: center;
-}
-.divcenter h2{
-    color: rgb(22, 2, 2);
-    font-size: 50px;
-    font-weight: bold;
-    width: 885px;
-    margin-top:10px ;
-    text-align: center;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    overflow-y: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-#container {
-    width: 500px;
-    margin: auto;
-}
-
-#flyMenu {
-    width: 370px;
-    max-width: 100%;
-    float: left;
-    padding: 50px 35px 40px 35px;
-    text-align: center;
-    background-color: #444444;
-    transition: all 0.3s ease-in-out;
-    position: fixed;
-    float: right;
-    right: 0;
-    top: 0;
-    height: 100%;
-    z-index: 9998;
-    transform: translate3d(370px, 0, 0);
-}
-
-#flyMenu.open {
-    transform: translate3d(0, 0, 0) !important;
-}
-
-#flyMenu .photo {
-    position: relative;
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 30px auto;
-    z-index: 1;
-}
-
-#flyMenu .photo::after {
-    content: "";
-    position: absolute;
-    right: -10px;
-    bottom: -7px;
-    display: block;
-    border-radius: 100%;
-    width: 100%;
-    height: 100%;
-    opacity: .3;
-    z-index: -1;
-    background-image: -webkit-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
-    background-image: -ms-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
-    background-size: 6px 6px;
-}
-
-#flyMenu .photo img {
-    width: 100%;
-    height: auto;
-    border-radius: 100%;
-    border: 3px solid #04B5C1;
-}
-
-#flyMenu .title {
-    margin-top: 15px;
-}
-
-#flyMenu .title h2 {
-    font-size: 32px;
-    font-weight: 600;
-    color: #f5f5f5;
-}
-
-#flyMenu .title h4 {
-    font-size: 15px;
-    font-weight: 300;
-    color: #bbb;
-}
-
-#flyMenu .mainMenu {
-    margin: 30px 0;
-}
-
-#flyMenu .mainMenu li a {
-    display: block;
-    color: #ffffff;
-    padding: 10px 0;
-    opacity: .7;
-    font-size: 14px;
-}
-
-#flyMenu .mainMenu li a:hover {
-    opacity: 1;
-}
-
-#container{
-   position: absolute; 
-    top: 29px;
-    left: 1410px;
-}
-#container #flyToggleButton{
-    font-size: 20px;
-}
-.hizmet1 p{
-    position:absolute;
-    width: 250px;
-    height:250px;
-    margin-top: 250px;
-    left: 200px;
-    color: #f5f5f5;
-}
-.hizmet1 img {
-    position: absolute;
-    width: 250px;
-    height:250px;
-    border: 5px solid #555;
-    left: 200px;
-}
-.hizmet2 img {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    border: 5px solid #555;
-    left: 650px;
-}
-.hizmet2 p{
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    margin-top: 250px;
-    left: 650px;
-    color: #f5f5f5;
-}
-.hizmet3 img {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    border: 5px solid #555;
-    left: 1100px;
-}
-.hizmet3 p{
-    position:absolute;
-    width: 250px;
-    height:250px;
-    margin-top: 250px;
-    left: 1110px;
-    color: #f5f5f5;
-
-}
-.hizmet4 img {
-    position: absolute;
-    top: 400px;
-    width: 250px;
-    height: 250px;
-    border: 5px solid #555;
-    left: 200px;
-}
-
-.hizmet4 p{
-    position:absolute;
-    width: 250px;
-    height:250px;
-    margin-top: 570px;
-    left: 200px;
-    color: #f5f5f5;
-}
-
-.hizmet5 img {
-    position: absolute;
-    top: 400px;
-    width: 250px;
-    height: 250px;
-    border: 5px solid #555;
-    left: 650px;
-}
-.hizmet5 p{
-    position:absolute;
-    width: 250px;
-    height:250px;
-    margin-top: 570px;
-    left: 650px;
-    color: #f5f5f5;
-}
-
-.hizmet6 img {
-    position: absolute;
-    top: 400px;
-    width: 250px;
-    height: 250px;
-    border: 5px solid #555;
-    left: 1100px;
-}
-.hizmet6 p{
-    position:absolute;
-    width: 250px;
-    height:250px;
-    margin-top: 570px;
-    left: 1110px;
-    color: #f5f5f5;
-}
-header{
-    font-size: 30px;
-        color: #b31111;
-        background-color: rgb(74, 101, 210);
-
-}
-</style>
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- <div class="container">
-    <div class="navbar">
-        <div class="logo">
-            <a href="#">SERDAR ELEKTRONİK</a>
-        </div>
-        <ul>
-            <li><a href="index.html">ANA SAYFA</a></li>
-            <li><a href="hizmetlerimiz.html"class="active">HİZMETLERİMİZ</a></li>
-            <li><a href="ürünlerimiz.html">YETKİLİ SERVİS</a></li>
-            <li><a href="fotoGaleri.html">FOTO GALERİ</a></li>
-        </ul>
-        
-    </div>
-    <div class="hizmet1">
-        <img src="img/5.jpg">
-            <p >Çanak anten montajı</p>
-        </div>
-    <div class="hizmet2">
-        <img src="img/uydu ve tv kurulumu.webp"> 
-        <p >Uydu ve Tv kurulumu</p> 
-    </div>
-   
-    <div class="hizmet3">
-    <img src="img/merkezi güvenlik sistemleri.jpg">  
-    <p >Merkezi güvenlik sistemleri</p>
-    </div>
-   
-    <div class="hizmet4">
-    <img src="img/lcd ekran tamiri.jpg">
-    <p>Lcd ekran tamiri</p>
-    </div>
-    <div class="hizmet5">
-    <img src="img/tv tamiri.jpg">
-    <p>Tv tamiri</p>
-    </div>
-    <div class="hizmet6">
-    <img src="img/ses sistemleri.webp">
-    <p>Ses sistemleri</p>
-    </div>
-    
 
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">SERDAR <span>ELEKTRONİK</span></a>
+        </div>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Nav Links Wrapper -->
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li><a href="hizmetlerimiz.html" class="active">HİZMETLERİMİZ</a></li>
+                <li><a href="yetkili-servis.html">YETKİLİ SERVİS</a></li>
+                <li><a href="foto-galeri.html">FOTO GALERİ</a></li>
+            </ul>
+            <button id="flyToggleButton" class="fly-menu-btn">İletişim & Geliştirici</button>
+        </div>
+    </nav>
+
+    <header class="page-header" data-aos="fade-in">
+        <h1 data-aos="fade-down" data-aos-delay="100">Hizmetlerimiz</h1>
+        <p data-aos="fade-up" data-aos-delay="200">Size sunduğumuz profesyonel elektronik çözümler (Detay için tıklayın)</p>
+    </header>
+
+    <main class="grid-container" style="padding-top: 50px;">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100" data-modal-target="modal-canak" style="cursor:pointer;">
+            <img src="img/5.jpg" alt="Çanak anten montajı">
+            <div class="card-content">
+                <h3>Çanak Anten Montajı</h3>
+                <span style="color:var(--secondary-color); font-size:0.9rem;">Detayları Gör &rarr;</span>
+            </div>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200" data-modal-target="modal-uydu" style="cursor:pointer;">
+            <img src="img/uydu ve tv kurulumu.webp" alt="Uydu ve Tv kurulumu">
+            <div class="card-content">
+                <h3>Uydu ve TV Kurulumu</h3>
+                <span style="color:var(--secondary-color); font-size:0.9rem;">Detayları Gör &rarr;</span>
+            </div>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="300" data-modal-target="modal-guvenlik" style="cursor:pointer;">
+            <img src="img/merkezi güvenlik sistemleri.jpg" alt="Merkezi güvenlik sistemleri">
+            <div class="card-content">
+                <h3>Merkezi Güvenlik Sistemleri</h3>
+                <span style="color:var(--secondary-color); font-size:0.9rem;">Detayları Gör &rarr;</span>
+            </div>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="400" data-modal-target="modal-lcd" style="cursor:pointer;">
+            <img src="img/lcd ekran tamiri.jpg" alt="Lcd ekran tamiri">
+            <div class="card-content">
+                <h3>LCD Ekran Tamiri</h3>
+                <span style="color:var(--secondary-color); font-size:0.9rem;">Detayları Gör &rarr;</span>
+            </div>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="500" data-modal-target="modal-tv" style="cursor:pointer;">
+            <img src="img/tv tamiri.jpg" alt="Tv tamiri">
+            <div class="card-content">
+                <h3>TV Tamiri</h3>
+                <span style="color:var(--secondary-color); font-size:0.9rem;">Detayları Gör &rarr;</span>
+            </div>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="600" data-modal-target="modal-ses" style="cursor:pointer;">
+            <img src="img/ses sistemleri.webp" alt="Ses sistemleri">
+            <div class="card-content">
+                <h3>Ses Sistemleri</h3>
+                <span style="color:var(--secondary-color); font-size:0.9rem;">Detayları Gör &rarr;</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        
+        <!-- Modal: Çanak Anten -->
+        <div class="service-modal" id="modal-canak">
+            <button class="close-modal">&times;</button>
+            <h2>Çanak Anten Montajı</h2>
+            <div class="modal-section">
+                <h4>Hizmet Hakkında</h4>
+                <p>Binanıza veya dairenize en uygun açıyla çanak anten kurulumu gerçekleştirilir. Sinyal kalitesini maksimuma çıkaracak özel cihazlarla yön ayarı yapılır.</p>
+            </div>
+            <div class="modal-section">
+                <h4>Sık Karşılaşılan Sorunlar</h4>
+                <ul>
+                    <li>Rüzgardan dolayı çanak yönünün bozulması (Sinyal Yok hatası).</li>
+                    <li>LNB arızaları.</li>
+                    <li>Kablo aşınması ve su alması.</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4>Çözümümüz</h4>
+                <p>Eski kablolarınız yenilenir, çanak anten fırtınaya dayanıklı şekilde sabitlenir ve ince ayar yapılarak HD/4K yayınları pürüzsüz izlemeniz sağlanır.</p>
+            </div>
+            <a href="https://wa.me/905378976461" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:10px;">Hemen Fiyat Al</a>
+        </div>
+
+        <!-- Modal: Uydu ve TV Kurulumu -->
+        <div class="service-modal" id="modal-uydu" style="display:none;">
+            <button class="close-modal">&times;</button>
+            <h2>Uydu ve TV Kurulumu</h2>
+            <div class="modal-section">
+                <h4>Hizmet Hakkında</h4>
+                <p>Yeni aldığınız televizyonların askı aparatıyla duvara montajı ve kutu açılışı sonrası ilk kurulum işlemlerini titizlikle yapıyoruz.</p>
+            </div>
+            <div class="modal-section">
+                <h4>Sık Karşılaşılan Sorunlar</h4>
+                <ul>
+                    <li>Kanalların silinmesi veya yerlerinin karışması.</li>
+                    <li>Televizyonun Wi-Fi ağına bağlanamaması.</li>
+                    <li>Yanlış montaj sonucu televizyonun düşme tehlikesi.</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4>Çözümümüz</h4>
+                <p>Televizyonunuz çelik dübellerle duvara sağlamca asılır. Akıllı TV özellikleri ayarlanır ve tüm kanallar Türksat sırasına göre güncellenir.</p>
+            </div>
+            <a href="https://wa.me/905378976461" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:10px;">Hemen Fiyat Al</a>
+        </div>
+
+        <!-- Modal: Merkezi Güvenlik -->
+        <div class="service-modal" id="modal-guvenlik" style="display:none;">
+            <button class="close-modal">&times;</button>
+            <h2>Merkezi Güvenlik Sistemleri</h2>
+            <div class="modal-section">
+                <h4>Hizmet Hakkında</h4>
+                <p>Ev ve iş yerleriniz için 7/24 izlenebilir, yüksek çözünürlüklü kamera ve alarm sistemleri kurulumu yapıyoruz.</p>
+            </div>
+            <div class="modal-section">
+                <h4>Sık Karşılaşılan Sorunlar</h4>
+                <ul>
+                    <li>Gece görüşünün bozulması.</li>
+                    <li>Kameraların telefondan izlenememesi (Ağ hatası).</li>
+                    <li>Kayıt cihazının (DVR) disk arızası vermesi.</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4>Çözümümüz</h4>
+                <p>İhtiyaca uygun çözünürlükte kameralar seçilir, kablolama gizlenir ve sistem telefonunuza kurularak uzaktan izleme aktif edilir.</p>
+            </div>
+            <a href="https://wa.me/905378976461" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:10px;">Hemen Keşif İste</a>
+        </div>
+
+        <!-- Modal: LCD Ekran -->
+        <div class="service-modal" id="modal-lcd" style="display:none;">
+            <button class="close-modal">&times;</button>
+            <h2>LCD Ekran Tamiri</h2>
+            <div class="modal-section">
+                <h4>Hizmet Hakkında</h4>
+                <p>Darbe sonucu kırılan veya sıvı teması olan LCD panellerin orijinal yedek parçalarla değişimi yapılır.</p>
+            </div>
+            <div class="modal-section">
+                <h4>Sık Karşılaşılan Sorunlar</h4>
+                <ul>
+                    <li>Ekranda yatay/dikey çizgiler çıkması.</li>
+                    <li>Ekranda fiziksel çatlak ve renk dağılması.</li>
+                    <li>Görüntünün yarısının karanlık olması.</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4>Çözümümüz</h4>
+                <p>Cihazınız evinizden alınır, panel değişimi tozsuz ortamda yapılır ve test edildikten sonra 1 yıl garantili olarak teslim edilir.</p>
+            </div>
+            <a href="https://wa.me/905378976461" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:10px;">Arıza Kaydı Bırak</a>
+        </div>
+
+        <!-- Modal: TV Tamiri -->
+        <div class="service-modal" id="modal-tv" style="display:none;">
+            <button class="close-modal">&times;</button>
+            <h2>Genel TV Tamiri</h2>
+            <div class="modal-section">
+                <h4>Hizmet Hakkında</h4>
+                <p>Televizyonunuzun anakart, besleme kartı ve LED aydınlatma arızalarını garantili olarak onarıyoruz.</p>
+            </div>
+            <div class="modal-section">
+                <h4>Sık Karşılaşılan Sorunlar</h4>
+                <ul>
+                    <li>Ses var, görüntü yok (LED Bar arızası).</li>
+                    <li>TV geç açılıyor veya hiç açılmıyor (Standby ışığı yanıp sönüyor).</li>
+                    <li>HDMI girişlerinin çalışmaması.</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4>Çözümümüz</h4>
+                <p>Patlamış LED'ler veya arızalı anakart bileşenleri tespit edilir, uzun ömürlü orijinal parçalarla değiştirilir.</p>
+            </div>
+            <a href="https://wa.me/905378976461" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:10px;">Arıza Kaydı Bırak</a>
+        </div>
+
+        <!-- Modal: Ses Sistemleri -->
+        <div class="service-modal" id="modal-ses" style="display:none;">
+            <button class="close-modal">&times;</button>
+            <h2>Ses Sistemleri</h2>
+            <div class="modal-section">
+                <h4>Hizmet Hakkında</h4>
+                <p>Ev sinema sistemleri, oto teyp ve amfi cihazlarınızın tamiri ve kurulumunu profesyonelce gerçekleştiriyoruz.</p>
+            </div>
+            <div class="modal-section">
+                <h4>Sık Karşılaşılan Sorunlar</h4>
+                <ul>
+                    <li>Hoparlörlerden cızırtı gelmesi.</li>
+                    <li>Amfinin "Protect" (Koruma) moduna geçmesi.</li>
+                    <li>Bluetooth bağlantı kopmaları.</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h4>Çözümümüz</h4>
+                <p>Amfi entegreleri yenilenir, kablo tesisatındaki kısa devreler giderilir ve pürüzsüz bir ses deneyimi sunulur.</p>
+            </div>
+            <a href="https://wa.me/905378976461" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:10px;">Hemen Fiyat Al</a>
+        </div>
+
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/905378976461" target="_blank" class="whatsapp-float">
+        💬 <span>Bize Ulaşın</span>
+    </a>
+
+    <!-- Fly Menu -->
+    <div id="flyMenu">
+        <!-- Fly Menu Content (same as index) -->
+        <button id="closeMenuBtn" class="close-menu-btn">&times;</button>
+        <div class="photo">
+            <img src="img/foto.jpg" alt="Muammer Çelik">
+        </div>
+        <div class="title">
+            <h2>Muammer Çelik</h2>
+            <h4>Öğrenci & Geliştirici</h4>
+        </div>
+        <ul class="mainMenu">
+            <li><a target="_blank" href="https://www.instagram.com/mmmr_clk_61/">📸 İnstagram</a></li>
+            <li><a target="_blank" href="https://www.facebook.com/muammer.celik.121">📘 Facebook</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UC6ljECf1dqznIpgFBCwc6nQ">🎥 YouTube</a></li>
+            <li><a target="_blank" href="https://github.com/smithcimuo">💻 Github</a></li>
+            <li><a href="mailto:muammeer.clk@gmail.com">✉️ Mail Gönder</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Serdar Elektronik</h3>
+                <p>Yılların tecrübesiyle elektronik cihazlarınızın onarımı ve kurulumu konusunda profesyonel destek sağlıyoruz.</p>
+            </div>
+            <div class="footer-col">
+                <h3>İletişim</h3>
+                <p>📍 Yeşilce Mh. Şehit Haydar Arslan Cd. 165. Sk. Arsin/Trabzon</p>
+                <p>📞 0537 897 64 61</p>
+                <p>⏰ Pazartesi - Cumartesi: 09:00 - 19:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Serdar Elektronik. Tasarım: Muammer Çelik.</p>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>

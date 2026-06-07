@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serdar Elektronik - Foto Galeri</title>
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">SERDAR <span>ELEKTRONİK</span></a>
+        </div>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Nav Links Wrapper -->
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li><a href="hizmetlerimiz.html">HİZMETLERİMİZ</a></li>
+                <li><a href="yetkili-servis.html">YETKİLİ SERVİS</a></li>
+                <li><a href="foto-galeri.html" class="active">FOTO GALERİ</a></li>
+            </ul>
+            <button id="flyToggleButton" class="fly-menu-btn">İletişim & Geliştirici</button>
+        </div>
+    </nav>
+
+    <header class="page-header" data-aos="fade-in">
+        <h1 data-aos="fade-down" data-aos-delay="100">Foto Galeri & İşçiliğimiz</h1>
+        <p data-aos="fade-up" data-aos-delay="200">Atölyemizden kareler ve Onarım Başarılarımız</p>
+    </header>
+
+    <!-- Before / After Section -->
+    <section style="background: var(--bg-light);">
+        <h2 class="section-title" data-aos="fade-up">İşçiliğimiz: Öncesi ve Sonrası</h2>
+        <p style="text-align:center; margin-bottom:20px; color:#555;" data-aos="fade-up">Arızalı bir cihazı nasıl ilk günkü haline getirdiğimizi görmek için çizgiyi sağa ve sola kaydırın.</p>
+        
+        <div class="ba-slider-container" data-aos="zoom-in" data-aos-delay="200">
+            <!-- Normalde buraya kırık ve sağlam iki aynı resim konur. 
+                 Elimizdeki resimlerden örnek bir kıyaslama simülasyonu yapıyoruz. -->
+            <img src="img/lcd ekran tamiri.jpg" alt="Sonrası" class="ba-img ba-after">
+            <div class="ba-before" id="baBeforeImage" style="position:absolute; top:0; left:0; height:100%; overflow:hidden;">
+                <!-- Kırık ekran simülasyonu için aynı resme filtre uygulayabiliriz ya da tv tamiri resmini koyabiliriz -->
+                <img src="img/tv tamiri.jpg" alt="Öncesi" class="ba-img" style="width: 800px; max-width:none;">
+            </div>
+            
+            <div class="ba-slider-line" id="baSliderLine"></div>
+            <div class="ba-slider-button" id="baSliderButton">&lt;&gt;</div>
+            <input type="range" min="0" max="100" value="50" class="ba-slider" id="baSlider">
+        </div>
+    </section>
+
+    <main class="grid-container" style="padding-bottom: 50px;">
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <img src="img/eski dükkan.jpg" alt="İlk dükkanım">
+            <div class="card-content">
+                <h3>İlk dükkanım</h3>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <img src="img/dayım1.jpg" alt="Atölyemde çalışırken">
+            <div class="card-content">
+                <h3>Atölyemde çalışırken</h3>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <img src="img/dayım2.jpg" alt="Oğlum ve Ben">
+            <div class="card-content">
+                <h3>Oğlum ve Ben</h3>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="400">
+            <img src="img/dayım8.jpg" alt="Ufaklıklar meslek öğrenirken">
+            <div class="card-content">
+                <h3>Ufaklıklar meslek öğrenirken</h3>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="500">
+            <img src="img/dayım4.jpg" alt="Babam ve arkadaşları dükkanımızda">
+            <div class="card-content">
+                <h3>Babam ve arkadaşları dükkanımızda</h3>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="600">
+            <img src="img/dükkan içi 1.jpg" alt="Son dükkanım">
+            <div class="card-content">
+                <h3>Son dükkanım</h3>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/905378976461" target="_blank" class="whatsapp-float">
+        💬 <span>Bize Ulaşın</span>
+    </a>
+
+    <!-- Fly Menu -->
+    <div id="flyMenu">
+        <!-- Fly Menu Content (same as index) -->
+        <button id="closeMenuBtn" class="close-menu-btn">&times;</button>
+        <div class="photo">
+            <img src="img/foto.jpg" alt="Muammer Çelik">
+        </div>
+        <div class="title">
+            <h2>Muammer Çelik</h2>
+            <h4>Öğrenci & Geliştirici</h4>
+        </div>
+        <ul class="mainMenu">
+            <li><a target="_blank" href="https://www.instagram.com/mmmr_clk_61/">📸 İnstagram</a></li>
+            <li><a target="_blank" href="https://www.facebook.com/muammer.celik.121">📘 Facebook</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UC6ljECf1dqznIpgFBCwc6nQ">🎥 YouTube</a></li>
+            <li><a target="_blank" href="https://github.com/smithcimuo">💻 Github</a></li>
+            <li><a href="mailto:muammeer.clk@gmail.com">✉️ Mail Gönder</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col" data-aos="fade-up">
+                <h3>Serdar Elektronik</h3>
+                <p>Yılların tecrübesiyle elektronik cihazlarınızın onarımı ve kurulumu konusunda profesyonel destek sağlıyoruz.</p>
+            </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <h3>İletişim</h3>
+                <p>📍 Yeşilce Mh. Şehit Haydar Arslan Cd. 165. Sk. Arsin/Trabzon</p>
+                <p>📞 0537 897 64 61</p>
+                <p>⏰ Pazartesi - Cumartesi: 09:00 - 19:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Serdar Elektronik. Tasarım: Muammer Çelik.</p>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
